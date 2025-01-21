@@ -2,6 +2,8 @@
 
 Template-based docx report creation for both Node and the browser. ([See the blog post](http://guigrpa.github.io/2017/01/01/word-docs-the-relay-way/)).
 
+## Fork features
+- Added auto detect complex script language and mark it using `<w:cs/>` tag. [See more](https://learn.microsoft.com/en-us/dotnet/api/documentformat.openxml.wordprocessing.complexscript?view=openxml-3.0.1)
 
 ## Why?
 
