@@ -11,7 +11,8 @@
         "declaration": true
     },
     "include": [
-        "src"
+        "src",
+        "rollup.config.mjs"
     ],
     "exclude": [
         "src/browser-polyfill.ts",
