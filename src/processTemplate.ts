@@ -534,6 +534,8 @@ type CommandProcessor = (
   ctx: Context
 ) => Promise<undefined | string | Error>;
 
+const thaiRegex = /[\u0E00-\u0E7F]/;
+
 const processText = async (
   data: ReportData | undefined,
   node: TextNode,
@@ -573,6 +575,18 @@ const processText = async (
               fCmd: false,
               fInsertedText: true,
             });
+
+            // Add <w:cs/> to w:rPr if Thai text is detected and <w:cs/> doesn't already exist
+            const containsThai = thaiRegex.test(cmdResultText);
+            if (containsThai && ctx.textRunPropsNode) {
+              const csExists = ctx.textRunPropsNode._children.some(
+                child => !child._fTextNode && child._tag === 'w:cs'
+              );
+              if (!csExists) {
+                const csNode = newNonTextNode('w:cs', {});
+                ctx.textRunPropsNode._children.push(csNode);
+              }
+            }
           } else {
             if (failFast) throw cmdResultText;
             errors.push(cmdResultText);
