@@ -1,6 +1,6 @@
 {
   "name": "@n0uur/docx-templates-fork",
-  "version": "4.13.0",
+  "version": "4.14.0",
   "description": "Template-based docx report creation with support for Thai's complex script",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
