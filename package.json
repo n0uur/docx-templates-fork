@@ -14,13 +14,13 @@
     "report",
     "template"
   ],
-  "homepage": "https://github.com/guigrpa/docx-templates#readme",
+  "homepage": "https://github.com/n0uur/docx-templates-fork#readme",
   "bugs": {
-    "url": "https://github.com/guigrpa/docx-templates/issues"
+    "url": "https://github.com/n0uur/docx-templates-fork/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/guigrpa/docx-templates.git"
+    "url": "git+https://github.com/n0uur/docx-templates-fork.git"
   },
   "scripts": {
     "prepare": "yarn compile",
